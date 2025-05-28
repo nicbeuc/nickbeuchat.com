@@ -1,0 +1,33 @@
+.headerWrapper {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+  grid-template-areas:
+  "logo logo logo logo logo logo logo title title title title nav nav";
+
+  @media (width <= 50rem) {
+    grid-template-areas:
+      "logo  logo  logo  nav   nav"
+      "title title title title title";
+  }
+}
+
+
+.logoWrapper {
+  grid-area: logo;
+}
+
+.titleWrapper {
+  grid-area: title;
+  color: var(--color-grey-800);
+  font-weight: 350;
+}
+
+.navWrapper {
+  grid-area: nav;
+  justify-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  gap: 1rem;
+}
