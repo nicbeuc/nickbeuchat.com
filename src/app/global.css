@@ -82,7 +82,21 @@ h6 {
   --color-background: var(--color-white);
   --color-foreground: var(--color-grey-1000);
   --color-foreground-dimmed: var(--color-grey-800);
+
   --font-size-body: 0.875rem;
+
+  --duration-medium: 0.35s;
+
+  --page-margin-block: 1.5rem;
+  --page-margin-inline: 2rem;
+
+  --grid-columns: repeat(12, 1fr);
+
+  @media (width <= 50rem) {
+    --page-margin-block: 1rem;
+    --page-margin-inline: 1rem;
+    --grid-columns: repeat(5, 1fr);
+  }
 
   @media (prefers-color-scheme: dark) {
     --color-background: var(--color-grey-1000);
@@ -106,16 +120,16 @@ body {
   background: var(--color-background);
   letter-spacing: -.035ch;
   font-weight: 400;
-  padding: 1.5rem 2rem;
+  padding: var(--page-margin-block) var(--page-margin-inline);
   font-weight: 500;
   display: grid;
   font-size: var(--font-size-body);
   line-height: 1.5;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: var(--grid-columns);
+  min-height: 100vh;
 
   @media (width <= 50rem) {
-    grid-template-columns: repeat(5, 1fr);
-    padding: 1rem;
+    padding: var(--page-margin-block) var(--page-margin-inline);
   }
 }
 

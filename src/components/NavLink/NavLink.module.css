@@ -1,0 +1,10 @@
+.link {
+  font-weight: 350;
+  color: var(--color-foreground-dimmed);
+  transition: all var(--duration-medium) ease;
+}
+
+.link[aria-current] {
+  font-weight: 500;
+  color: var(--color-foreground);
+}
