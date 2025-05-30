@@ -4,4 +4,16 @@
   left: -0.35em;
   top: -0.2em;
   width: auto !important;
+  opacity: 0;
+  animation: fade-in var(--duration-medium) ease forwards;
+}
+
+/* Temp fade in animation until page transitions/entrance animations configured */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,31 @@
+.wrapper {
+  grid-template-areas:
+    "text text text text text text text links links links links links";
+  padding-bottom: 2rem;
+  border-bottom: var(--border-divider);
+
+  @media (width <= 50rem) {
+    grid-template-areas:
+        "text  text  text  text  text"
+        "links links links links links";
+  }
+}
+
+.wrapper p {
+  grid-area: text;
+  align-self: end;
+}
+
+.wrapper ul {
+  grid-area: links;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  @media (width <=50rem) {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+

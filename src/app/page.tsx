@@ -1,7 +1,9 @@
+import Intro from '@/sections/Intro/Intro'
+
 export default function Home() {
   return (
-    <div>
-      {/* <h1>Test</h1> */}
-    </div>
+    <main id="main-content">
+      <Intro />
+    </main>
   );
 }

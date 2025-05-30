@@ -84,6 +84,7 @@ h6 {
   --color-foreground-dimmed: var(--color-grey-800);
 
   --font-size-body: 0.875rem;
+  --font-size-title: 1.5rem;
 
   --duration-medium: 0.35s;
 
@@ -91,6 +92,8 @@ h6 {
   --page-margin-inline: 2rem;
 
   --grid-columns: repeat(12, 1fr);
+
+  --border-divider: 1px solid var(--color-grey-300);
 
   @media (width <= 50rem) {
     --page-margin-block: 1rem;
@@ -119,14 +122,13 @@ body {
   color: var(--color-foreground);
   background: var(--color-background);
   letter-spacing: -.035ch;
-  font-weight: 400;
   padding: var(--page-margin-block) var(--page-margin-inline);
-  font-weight: 500;
+  font-weight: 300;
   display: grid;
   font-size: var(--font-size-body);
   line-height: 1.5;
   grid-template-columns: var(--grid-columns);
-  min-height: 100vh;
+  min-height: 200vh;
 
   @media (width <= 50rem) {
     padding: var(--page-margin-block) var(--page-margin-inline);
@@ -142,6 +144,36 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+main {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-self: start;
+  padding-top: 11rem;
+}
+
+main > * {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-self: start;
+}
+
+ul,ol {
+  list-style: none;
+  padding: 0;
+  max-resolution: 0;
+}
+
+/* Typography */
+
+.font-title {
+  font-size: var(--font-size-title);
+  letter-spacing: -.05ch;
+  text-wrap: balance;
+  line-height: 1.25;
 }
 
 /* Utility */

@@ -12,7 +12,11 @@ export default function AnimatedLogo({compact = false} : AnimatedLogoProps) {
     animationData: animatedLogo,
     loop: false,
     autoplay: false,
-    className: styles.logo
+    className: styles.logo,
+    rendererSettings: {
+      title: "Nick Beuchat",
+      progressiveLoad: true,
+    }
   });
 
   React.useEffect(() => {
