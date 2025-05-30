@@ -8,6 +8,14 @@
   animation: fade-in var(--duration-medium) ease forwards;
 }
 
+.logo svg path:not([stroke-width]) {
+  fill: currentColor !important;
+}
+
+.logo svg path[stroke-width] {
+  stroke: currentColor !important;
+}
+
 /* Temp fade in animation until page transitions/entrance animations configured */
 @keyframes fade-in {
   from {

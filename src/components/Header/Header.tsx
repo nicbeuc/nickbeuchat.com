@@ -6,7 +6,8 @@ import styles from './Header.module.css'
 import NavLink from '@/components/NavLink/NavLink'
 import AnimatedLogo from '../AnimatedLogo/AnimatedLogo'
 
-// to do: fallback for lottie animation
+// to do: fallback for lottie animation OR configure entrance animations
+// to do: "scrolled" state when page refresh from below threshold
 
 export default function Header() {
   const [scrolled, setScrolled] = React.useState(false);

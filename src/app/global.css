@@ -71,40 +71,54 @@ h6 {
 /* Variables */
 
 :root {
+  /* Colors */
   --color-black: black;
   --color-grey-1000: #171717;
   --color-grey-900: #666666;
   --color-grey-800: #7D7D7D;
+  --color-grey-700: #8F8F8F;
+  --color-grey-600: #A8A8A8;
   --color-grey-500: #C9C9C9;
+  --color-grey-400: #EAEAEA;
   --color-grey-300: #E6E6E6;
   --color-grey-200: #EBEBEB;
+  --color-grey-100: #F2F2F2;
   --color-white: white;
   --color-background: var(--color-white);
   --color-foreground: var(--color-grey-1000);
   --color-foreground-dimmed: var(--color-grey-800);
+  --color-border: var(--color-grey-300);
 
+  /* Typography */
   --font-size-body: 0.875rem;
   --font-size-title: 1.5rem;
 
+  /* Animations & Transitions */
   --duration-medium: 0.35s;
 
+  /* Margins */
   --page-margin-block: 1.5rem;
   --page-margin-inline: 2rem;
 
+  /* Grid */
   --grid-columns: repeat(12, 1fr);
 
-  --border-divider: 1px solid var(--color-grey-300);
+  /* Borders */
+  --border-divider: 1px solid var(--color-border);
 
+  /* Mobile */
   @media (width <= 50rem) {
     --page-margin-block: 1rem;
     --page-margin-inline: 1rem;
     --grid-columns: repeat(5, 1fr);
   }
 
+  /* Dark Mode */
   @media (prefers-color-scheme: dark) {
     --color-background: var(--color-grey-1000);
     --color-foreground: var(--color-white);
-    --color-foreground-dimmed: var(--color-grey-200);
+    --color-foreground-dimmed: var(--color-grey-700);
+    --color-border: var(--color-grey-900);
   }
 }
 

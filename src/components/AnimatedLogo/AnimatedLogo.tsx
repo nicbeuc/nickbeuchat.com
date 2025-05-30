@@ -7,6 +7,8 @@ type AnimatedLogoProps = {
   compact: boolean
 }
 
+// to do: seeking?
+
 export default function AnimatedLogo({compact = false} : AnimatedLogoProps) {
   const { View, play, setDirection } = useLottie({
     animationData: animatedLogo,
