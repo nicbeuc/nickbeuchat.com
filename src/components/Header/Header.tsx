@@ -30,7 +30,7 @@ export default function Header() {
       <div className={styles.titleWrapper}>
         <p>Designer & Developer</p>
       </div>
-      <nav className={styles.navWrapper}>
+      <nav className={`${styles.navWrapper} site-nav`}>
         <NavLink href="/">Work</NavLink>
         <NavLink href="/about">About</NavLink>
       </nav>

@@ -136,13 +136,14 @@ body {
   color: var(--color-foreground);
   background: var(--color-background);
   letter-spacing: -.035ch;
-  padding: var(--page-margin-block) var(--page-margin-inline);
   font-weight: 300;
-  display: grid;
   font-size: var(--font-size-body);
+  display: grid;
+  align-items: start;
   line-height: 1.5;
   grid-template-columns: var(--grid-columns);
   min-height: 200vh;
+  padding: var(--page-margin-block) var(--page-margin-inline);
 
   @media (width <= 50rem) {
     padding: var(--page-margin-block) var(--page-margin-inline);
@@ -200,4 +201,13 @@ ul,ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+/* Repeat styles */
+
+.site-nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  gap: 1rem;
 }

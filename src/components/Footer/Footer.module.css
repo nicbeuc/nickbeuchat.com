@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  grid-column: 1/-1;
+  align-self: end;
+  grid-template-columns: subgrid;
+  grid-template-areas:
+    "copy copy . . . . . . . links links links";
+  padding-top: 1.5rem;
+  border-top: var(--border-divider);
+}
+
+.copyright {
+  grid-area: copy;
+}
+
+.copyright svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-end: .15rem;
+  color: var(--color-foreground);
+}
+
+.copyright span {
+  color: var(--color-foreground-dimmed);
+}
+
+.links {
+  grid-area: links;
+  justify-self: end;
+}
