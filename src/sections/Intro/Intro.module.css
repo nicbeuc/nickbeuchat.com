@@ -3,6 +3,7 @@
     "text text text text text text text links links links links links";
   padding-bottom: 2rem;
   border-bottom: var(--border-divider);
+  align-items: end;
 
   @media (width <= 50rem) {
     grid-template-areas:
@@ -13,7 +14,6 @@
 
 .wrapper p {
   grid-area: text;
-  align-self: end;
 }
 
 .wrapper ul {
