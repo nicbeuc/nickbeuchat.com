@@ -96,6 +96,7 @@ h6 {
 
   /* Animations & Transitions */
   --duration-medium: 0.35s;
+  --duration-short: 0.2s;
 
   /* Margins */
   --page-margin-block: 1.5rem;

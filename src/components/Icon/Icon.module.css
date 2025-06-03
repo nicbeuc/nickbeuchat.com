@@ -6,4 +6,7 @@
   stroke: var(--__icon-color);
   user-select: none;
   pointer-events: none;
+  transition-duration: inherit;
+  transition-property: all;
+  transition-timing-function: inherit;
 }

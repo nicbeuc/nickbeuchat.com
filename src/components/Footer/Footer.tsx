@@ -13,7 +13,7 @@ export default function Footer() {
       <nav className={`${styles.links} site-nav`}>
         <NavLink href="/">Work</NavLink>
         <NavLink href="/about">About</NavLink>
-        <NavLink href="/Colophon">Colophon</NavLink>
+        <NavLink href="/colophon">Colophon</NavLink>
       </nav>
     </footer>
   )

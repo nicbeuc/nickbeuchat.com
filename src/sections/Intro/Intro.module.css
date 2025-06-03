@@ -20,7 +20,7 @@
   grid-area: links;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: .65rem;
 
   @media (width <=50rem) {
     flex-direction: row;

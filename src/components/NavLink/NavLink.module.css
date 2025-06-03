@@ -1,10 +1,16 @@
 .link {
   font-weight: 350;
   color: var(--color-foreground-dimmed);
-  transition: all var(--duration-medium) ease;
+  transition: all var(--duration-short) ease;
 }
 
 .link[aria-current] {
   font-weight: 500;
   color: var(--color-foreground);
+}
+
+@media (pointer:fine) {
+  .link:hover {
+    color: var(--color-foreground);
+  }
 }

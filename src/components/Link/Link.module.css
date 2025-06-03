@@ -1,12 +1,19 @@
 .link {
+  --__link-color: var(--link-color, var(--color-foreground-dimmed));
+  --__link-color-hover: var(--link-color-hover, var(--color-foregound));
   --icon-color: var(--color-foreground-subtle);
+  color: var(--__link-color);
   display: inline-flex;
   align-items: center;
-  gap: .5em;
+  gap: .35em;
   position: relative;
+  text-decoration: underline;
+  text-underline-offset: .3em;
+  text-decoration-color: var(--color-foreground-subtle);
+  transition: color var(--duration-short) ease, text-decoration-color var(--duration-short) ease;
 }
 
-.link::after {
+/* .link::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -14,4 +21,12 @@
   right: 0;
   height: 1px;
   background-color: var(--color-foreground-subtle);
+} */
+
+@media (pointer:fine) {
+  .link:hover {
+    --icon-color: var(--__link-color-hover);
+    color: var(--__link-color-hover);
+    text-decoration-color: var(--__link-color-hover);
+  }
 }
