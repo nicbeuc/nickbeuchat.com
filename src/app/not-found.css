@@ -4,11 +4,15 @@ main:has(.not-found-wrapper) {
 
 .not-found-wrapper {
   grid-template-areas:
-    "msg  msg  msg  . ."
-    "link link link . .";
+    "title title title title title"
+    "msg   msg   msg   msg   msg"
+    "link  link  link  link  link";
 
   @media (width > 50rem) {
-    grid-column: 8/13;
+    grid-column: 7/13;
+    grid-template-areas:
+      "title msg  msg  msg  . ."
+      ".     link link link . .";
   }
 }
 
@@ -19,4 +23,16 @@ main:has(.not-found-wrapper) {
 .not-found-wrapper a {
   grid-area: link;
   margin-top: .5rem;
+}
+
+.not-found-wrapper h1 {
+  grid-area: title;
+  margin: 0 0 1rem 0;
+  color: var(--color-foreground-dimmed);
+
+  @media (width > 50rem) {
+    justify-self: end;
+    text-align: right;
+    margin: 0 1.5rem 0 0;
+  }
 }

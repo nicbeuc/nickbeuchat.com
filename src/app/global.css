@@ -93,6 +93,11 @@ h6 {
   /* Typography */
   --font-size-body: 0.875rem;
   --font-size-title: 1.5rem;
+  --font-letter-spacing-body: -.035ch;
+  --font-letter-spacing-title: -.05ch;
+  --font-weight-body: 300;
+  --font-line-height-body: 1.5;
+  --font-line-height-title: 1.25;
 
   /* Animations & Transitions */
   --duration-medium: 0.35s;
@@ -138,12 +143,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-foreground);
   background: var(--color-background);
-  letter-spacing: -.035ch;
-  font-weight: 300;
+  letter-spacing: var(--font-letter-spacing-body);
+  font-weight: var(--font-weight-body);
   font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
   display: grid;
   align-items: start;
-  line-height: 1.5;
   grid-template-columns: var(--grid-columns);
   min-height: 100vh;
   padding: var(--page-margin-block) var(--page-margin-inline);
@@ -187,11 +192,17 @@ ul,ol {
 
 /* Typography */
 
+.font-body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--font-line-height-body);
+}
+
 .font-title {
   font-size: var(--font-size-title);
-  letter-spacing: -.05ch;
+  letter-spacing: var(--font-letter-spacing-title);
+  line-height: var(--font-line-height-title);
   text-wrap: balance;
-  line-height: 1.25;
 }
 
 /* Utility */
