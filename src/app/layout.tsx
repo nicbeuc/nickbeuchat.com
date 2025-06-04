@@ -31,7 +31,9 @@ export default function RootLayout({
     <html lang="en" className={switzerFont.className}>
       <body>
         <Header />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

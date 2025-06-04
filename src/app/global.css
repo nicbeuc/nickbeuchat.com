@@ -119,8 +119,8 @@ h6 {
   @media (prefers-color-scheme: dark) {
     --color-background: var(--color-grey-1000);
     --color-foreground: var(--color-white);
-    --color-foreground-dimmed: var(--color-grey-700);
-    --color-foreground-subtle: var(--color-grey-600);
+    --color-foreground-dimmed: var(--color-grey-500);
+    --color-foreground-subtle: var(--color-grey-800);
     --color-border: var(--color-grey-900);
   }
 }
@@ -145,7 +145,7 @@ body {
   align-items: start;
   line-height: 1.5;
   grid-template-columns: var(--grid-columns);
-  min-height: 200vh;
+  min-height: 100vh;
   padding: var(--page-margin-block) var(--page-margin-inline);
 
   @media (width <= 50rem) {

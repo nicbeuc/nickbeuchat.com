@@ -1,0 +1,22 @@
+main:has(.not-found-wrapper) {
+  align-self: center;
+}
+
+.not-found-wrapper {
+  grid-template-areas:
+    "msg  msg  msg  . ."
+    "link link link . .";
+
+  @media (width > 50rem) {
+    grid-column: 8/13;
+  }
+}
+
+.not-found-wrapper p {
+  grid-area: msg;
+}
+
+.not-found-wrapper a {
+  grid-area: link;
+  margin-top: .5rem;
+}
