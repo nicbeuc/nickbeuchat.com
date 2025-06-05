@@ -2,9 +2,9 @@
 
 import React from 'react'
 import Link from 'next/link'
-import styles from './Header.module.css'
-import NavLink from '@/components/NavLink/NavLink'
-import AnimatedLogo from '../AnimatedLogo/AnimatedLogo'
+import NavLink from '@/components/NavLink'
+import AnimatedLogo from '../AnimatedLogo'
+import styles from './styles.module.css'
 
 // to do: fallback for lottie animation OR configure entrance animations
 // to do: "scrolled" state when page refresh from below threshold

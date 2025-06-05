@@ -1,4 +1,4 @@
-import styles from './Icon.module.css'
+import styles from './styles.module.css'
 
 export type IconProps = {
   name: "download" | "copy" | "arrow-top-right"

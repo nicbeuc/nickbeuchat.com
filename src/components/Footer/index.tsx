@@ -1,6 +1,6 @@
-import Monogram from "../Monogram/Monogram"
-import NavLink from "../NavLink/NavLink";
-import styles from './Footer.module.css'
+import Monogram from "../Monogram"
+import NavLink from "../NavLink";
+import styles from './styles.module.css'
 
 export default function Footer() {
   const yr = new Date().getFullYear();

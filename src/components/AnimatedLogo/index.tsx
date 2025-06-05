@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLottie } from 'lottie-react'
 import animatedLogo from './animated-logo.json'
-import styles from './AnimatedLogo.module.css'
+import styles from './styles.module.css'
 
 type AnimatedLogoProps = {
   compact: boolean

@@ -1,7 +1,7 @@
-import Intro from '@/sections/Intro/Intro'
+import IntroSection from '@/sections/IntroSection'
 
 export default function Home() {
   return (<>
-    <Intro />
+    <IntroSection />
   </>);
 }

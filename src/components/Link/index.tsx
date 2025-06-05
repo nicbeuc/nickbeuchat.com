@@ -1,9 +1,9 @@
 'use client'
 
 import NextLink from "next/link"
-import Icon from "../Icon/Icon"
-import { IconProps } from "../Icon/Icon"
-import styles from './Link.module.css'
+import Icon from "../Icon"
+import { IconProps } from "../Icon"
+import styles from './styles.module.css'
 
 type LinkProps = {
   href: string,
