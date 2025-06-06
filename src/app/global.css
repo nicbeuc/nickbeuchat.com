@@ -198,6 +198,13 @@ ul,ol {
   line-height: var(--font-line-height-body);
 }
 
+h2, h3, h4, h5 {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--font-line-height-body);
+  color: var(--color-foreground-dimmed);
+}
+
 .font-title {
   font-size: var(--font-size-title);
   letter-spacing: var(--font-letter-spacing-title);

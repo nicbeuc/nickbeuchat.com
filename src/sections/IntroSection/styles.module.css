@@ -24,7 +24,7 @@
 
   @media (width <=50rem) {
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 1.5rem;
   }
 }

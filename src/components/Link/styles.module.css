@@ -1,5 +1,5 @@
 .link {
-  --__link-color: var(--link-color, var(--color-foreground-dimmed));
+  --__link-color: var(--link-color, var(--color-foreground));
   --__link-color-hover: var(--link-color-hover, var(--color-foregound));
   --icon-color: var(--color-foreground-subtle);
   color: var(--__link-color);
