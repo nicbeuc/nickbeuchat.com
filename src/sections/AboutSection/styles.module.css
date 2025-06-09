@@ -4,7 +4,7 @@
     "images images images images images";
   @media (width > 50rem) {
     grid-template-areas:
-      "images images images images images copy copy copy copy copy copy copy";
+      "images images images images images images copy copy copy copy copy copy";
   }
 }
 
@@ -20,8 +20,6 @@
 
 .copyWrapper h2 {
   margin: 0 0 1rem 0;
-  grid-area: title;
-  white-space: nowrap;
 
   @media (width > 50rem) {
     justify-self: end;
@@ -38,16 +36,16 @@
   margin-top: 1rem;
 }
 
-.copyWrapper > div {
+.sectionWrapper {
   display: grid;
   grid-template-columns: subgrid;
 }
 
-.copyWrapper > div + div {
+.sectionWrapper + .sectionWrapper {
   margin-top: 2rem;
 }
 
-.copyWrapper > div[data-layout="1"] {
+.sectionWrapper[data-layout="1"] {
   grid-column: 1/-1;
   grid-template-areas:
     "title title title title title"
@@ -55,15 +53,47 @@
 
   @media (width > 50rem) {
     grid-template-areas:
-        "title title content content content content content";
+        "title content content content content content";
   }
 }
 
-.content {
+.sectionWrapper[data-layout="2"] {
+  grid-column: 1/-1;
+  grid-template-areas:
+    "title1 title1 title2 title2 title2"
+    "content1 content1 content2 content2 content2";
+
+  @media (width > 50rem) {
+    grid-template-areas:
+      "title1 content1 content1 title2 content2 content2";
+  }
+}
+
+.sectionWrapper[data-layout="1"] h2 {
+  grid-area: title;
+}
+
+.sectionWrapper[data-layout="2"] h2:first-of-type {
+  grid-area: title1;
+}
+
+.sectionWrapper[data-layout="2"] > *:nth-child(2) {
+  grid-area: content1;
+}
+
+.sectionWrapper[data-layout="2"] h2:nth-of-type(2) {
+  grid-area: title2;
+}
+
+.sectionWrapper[data-layout="2"] > *:nth-child(4) {
+  grid-area: content2;
+}
+
+.sectionWrapper[data-layout="1"] > *:last-child {
   grid-area: content;
 }
 
-.copyWrapper > div:is(:nth-of-type(2)) .content {
+.sectionWrapper:is(:nth-of-type(2)) > *:last-child {
   padding-bottom: 2rem;
   border-bottom: var(--border-divider);
 }
