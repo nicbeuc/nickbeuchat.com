@@ -8,14 +8,14 @@ export default function AboutSection() {
 
       </section>
       <section className={styles.copyWrapper}>
-        <div className={styles.sectionWrapper} data-layout="1">
+        <div className={styles.sectionWrapper}>
           <h2>About Me</h2>
           <div>
             <p>Hi, I&apos;m Nick, a designer and creative developer with a passion for crafting simple, inclusive solutions for the web.</p>
             <p>Currently, I&apos;m living and working in my hometown of Knoxville, TN, designing and developing user experiences for Make Me Modern.</p>
           </div>
         </div>
-        <div className={styles.sectionWrapper} data-layout="1">
+        <div className={styles.sectionWrapper}>
           <h2>Contact</h2>
           <ul className={styles.linkList}>
             <li>
@@ -29,7 +29,7 @@ export default function AboutSection() {
             </li>
           </ul>
         </div>
-        <div className={styles.sectionWrapper} data-layout="2">
+        <div className={styles.sectionWrapper}>
           <h2>Skills</h2>
           <ul>
             <li>Art Direction</li>
@@ -39,6 +39,8 @@ export default function AboutSection() {
             <li>Web</li>
             <li>Motion</li>
           </ul>
+        </div>
+        <div className={styles.sectionWrapper}>
           <h2>Tools</h2>
           <ul>
             <li>Next.js</li>

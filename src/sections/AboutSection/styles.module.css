@@ -2,7 +2,7 @@
   grid-template-areas:
     "copy copy copy copy copy"
     "images images images images images";
-  @media (width > 50rem) {
+  @media (width > 60rem) {
     grid-template-areas:
       "images images images images images images copy copy copy copy copy copy";
   }
@@ -15,87 +15,99 @@
 .copyWrapper {
   grid-area: copy;
   display: grid;
+  row-gap: 2rem;
+  grid-template-columns: subgrid;
+  grid-template-areas:
+      "about about about about about about"
+      "contact contact contact contact contact contact"
+      "divider1 divider1 divider1 divider1 divider1 divider1"
+      "skills skills skills tools tools tools"
+      "divider2 divider2 divider2 divider2 divider2 divider2"
+      "reading reading reading listening listening listening"
+      "watching watching watching listening listening listening";
+
+  @media (width > 60rem) {
+    grid-template-areas:
+      "about about about about about about"
+      "contact contact contact contact contact contact"
+      ". divider1 divider1 divider1 divider1 divider1"
+      "skills skills skills tools tools tools"
+      ". divider2 divider2 divider2 divider2 divider2"
+      "reading reading reading listening listening listening"
+      "watching watching watching listening listening listening";
+  }
+}
+
+.sectionWrapper {
+  display: grid;
+  align-content: start;
+  align-items: start;
   grid-template-columns: subgrid;
 }
 
-.copyWrapper h2 {
+.sectionWrapper h2 {
   margin: 0 0 1rem 0;
+  grid-column: 1/-1;
 
-  @media (width > 50rem) {
+  @media (width > 60rem) {
+    grid-column: 1/2;
     justify-self: end;
     text-align: right;
     margin: 0 1.5rem 0 0;
   }
 }
 
-.copyWrapper p {
-  text-wrap: balance;
-}
-
-.copyWrapper p + p {
-  margin-top: 1rem;
-}
-
-.sectionWrapper {
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-.sectionWrapper + .sectionWrapper {
-  margin-top: 2rem;
-}
-
-.sectionWrapper[data-layout="1"] {
+.sectionWrapper h2 + * {
   grid-column: 1/-1;
-  grid-template-areas:
-    "title title title title title"
-    "content content content content content";
 
-  @media (width > 50rem) {
-    grid-template-areas:
-        "title content content content content content";
+  @media (width > 60rem) {
+    grid-column: 2/-1;
   }
 }
 
-.sectionWrapper[data-layout="2"] {
-  grid-column: 1/-1;
-  grid-template-areas:
-    "title1 title1 title2 title2 title2"
-    "content1 content1 content2 content2 content2";
-
-  @media (width > 50rem) {
-    grid-template-areas:
-      "title1 content1 content1 title2 content2 content2";
-  }
+.sectionWrapper:nth-child(1) {
+  grid-area: about;
 }
 
-.sectionWrapper[data-layout="1"] h2 {
-  grid-area: title;
+.sectionWrapper:nth-child(2) {
+  grid-area: contact;
 }
 
-.sectionWrapper[data-layout="2"] h2:first-of-type {
-  grid-area: title1;
+.sectionWrapper:nth-child(3) {
+  grid-area: skills;
 }
 
-.sectionWrapper[data-layout="2"] > *:nth-child(2) {
-  grid-area: content1;
+.sectionWrapper:nth-child(4) {
+  grid-area: tools;
 }
 
-.sectionWrapper[data-layout="2"] h2:nth-of-type(2) {
-  grid-area: title2;
+.sectionWrapper:nth-child(5) {
+  grid-area: reading;
 }
 
-.sectionWrapper[data-layout="2"] > *:nth-child(4) {
-  grid-area: content2;
+.sectionWrapper:nth-child(6) {
+  grid-area: watching;
 }
 
-.sectionWrapper[data-layout="1"] > *:last-child {
-  grid-area: content;
+.sectionWrapper:nth-child(7) {
+  grid-area: listening;
 }
 
-.sectionWrapper:is(:nth-of-type(2)) > *:last-child {
-  padding-bottom: 2rem;
-  border-bottom: var(--border-divider);
+.copyWrapper::before,
+.copyWrapper::after {
+  content: '';
+  position: relative;
+  display: block;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.copyWrapper::before {
+  grid-area: divider1;
+}
+
+.copyWrapper::after {
+  grid-area: divider2;
 }
 
 .linkList {

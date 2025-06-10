@@ -9,7 +9,7 @@
   grid-template-areas:
   "logo logo logo logo logo logo logo title title title title nav nav";
 
-  @media (width <= 50rem) {
+  @media (width <= 60rem) {
     grid-template-areas:
       "logo  logo  logo  nav   nav"
       "title title title title title";
