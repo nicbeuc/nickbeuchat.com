@@ -235,6 +235,10 @@ h2, h3, h4, h5 {
   white-space: nowrap;
 }
 
+.color-dimmed {
+  color: var(--color-foreground-dimmed);
+}
+
 /* Repeat styles */
 
 .site-nav {
@@ -242,4 +246,22 @@ h2, h3, h4, h5 {
   grid-auto-flow: column;
   grid-auto-columns: min-content;
   gap: 1rem;
+}
+
+@media (width > 60rem) {
+  .item-group > * + * {
+    margin-top: .25rem;
+  }
+}
+
+.item-group + .item-group {
+  margin-top: .75rem;
+}
+
+@media (width <= 60rem) {
+  .item-group {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+  }
 }

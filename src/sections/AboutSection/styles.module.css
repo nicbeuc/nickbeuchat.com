@@ -15,16 +15,17 @@
 .copyWrapper {
   grid-area: copy;
   display: grid;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   grid-template-columns: subgrid;
   grid-template-areas:
-      "about about about about about about"
-      "contact contact contact contact contact contact"
-      "divider1 divider1 divider1 divider1 divider1 divider1"
-      "skills skills skills tools tools tools"
-      "divider2 divider2 divider2 divider2 divider2 divider2"
-      "reading reading reading listening listening listening"
-      "watching watching watching listening listening listening";
+      "about about about about about"
+      "contact contact contact contact contact"
+      "divider1 divider1 divider1 divider1 divider1"
+      "skills skills skills tools tools"
+      "divider2 divider2 divider2 divider2 divider2"
+      "reading reading reading reading reading"
+      "watching watching watching watching watching"
+      "listening listening listening listening listening";
 
   @media (width > 60rem) {
     grid-template-areas:
@@ -46,7 +47,7 @@
 }
 
 .sectionWrapper h2 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
   grid-column: 1/-1;
 
   @media (width > 60rem) {

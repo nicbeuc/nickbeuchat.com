@@ -51,6 +51,37 @@ export default function AboutSection() {
             <li>Photoshop</li>
           </ul>
         </div>
+        <div className={styles.sectionWrapper}>
+          <h2>Reading</h2>
+          <div className="item-group">
+            <Link href="https://www.goodreads.com/book/show/40495148-blindness" external iconName="arrow-top-right">Blindness</Link>
+            <p className="color-dimmed">José Saramago</p>
+          </div>
+        </div>
+        <div className={styles.sectionWrapper}>
+          <h2>Watching</h2>
+          <div className="item-group">
+            <Link href="https://letterboxd.com/film/yi-yi/" external iconName="arrow-top-right">Yi Yi</Link>
+            <p className="color-dimmed">dir. Edward Yang</p>
+          </div>
+        </div>
+        <div className={styles.sectionWrapper}>
+          <h2>Listening</h2>
+          <ul>
+            <li className="item-group">
+              <Link href="https://open.spotify.com/album/6uLokj5GmuVeUWWJEzabT9" external iconName="arrow-top-right">Axxess &amp; Ace</Link>
+              <p className="color-dimmed">Songs: Ohia</p>
+            </li>
+            <li className="item-group">
+              <Link href="https://open.spotify.com/album/4rL0RzmHMQyHiZqJVdt7A8" external iconName="arrow-top-right">Old Ramon</Link>
+              <p className="color-dimmed">Red House Painters</p>
+            </li>
+            <li className="item-group">
+              <Link href="https://open.spotify.com/album/71R4tl3qYgZVvdlwE7Fxs6" external iconName="arrow-top-right">Tin Drum</Link>
+              <p className="color-dimmed">Japan</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   )
