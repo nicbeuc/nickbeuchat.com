@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   display: grid;
   padding: var(--page-margin-block) var(--page-margin-inline);
   grid-template-columns: var(--grid-columns);
