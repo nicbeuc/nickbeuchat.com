@@ -6,8 +6,8 @@ export default function AboutSection() {
   return (
     <div className={styles.wrapper}>
       <section className={styles.imagesWrapper}>
-        <Image src="/images/nick-placeholder.jpg" width={500} height={500} alt="Nick Beuchat" caption="Nick" />
-        <Image src="/images/griff-placeholder.jpg" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" />
+        <Image src="/images/nick-placeholder.webp" width={500} height={500} alt="Nick Beuchat" caption="Nick"/>
+        <Image src="/images/griff-placeholder.webp" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" />
       </section>
       <section className={styles.copyWrapper}>
         <div className={styles.sectionWrapper}>
@@ -56,7 +56,7 @@ export default function AboutSection() {
         <div className={styles.sectionWrapper}>
           <h2>Reading</h2>
           <div className="item-group">
-            <Link href="https://www.goodreads.com/book/show/40495148-blindness" external iconName="arrow-top-right">Blindness</Link>
+            <Link href="https://www.goodreads.com/book/show/2528.All_the_Names" external iconName="arrow-top-right">All The Names</Link>
             <p className="color-dimmed">José Saramago</p>
           </div>
         </div>

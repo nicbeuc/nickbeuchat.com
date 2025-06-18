@@ -1,5 +1,6 @@
 .image {
   --__image-ratio: var(--image-ratio, 1);
+  --__image-caption-align: var(--image-caption-align, left);
   aspect-ratio: var(--__image-ratio);
   width: 100%;
   height: auto;
@@ -17,4 +18,5 @@
   margin-top: .5rem;
   font-size: var(--font-size-body);
   color: var(--color-foreground-dimmed);
+  text-align: var(--__image-caption-align);
 }

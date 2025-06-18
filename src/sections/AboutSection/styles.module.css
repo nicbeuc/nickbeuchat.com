@@ -36,6 +36,7 @@
 }
 
 .imagesWrapper figure:nth-of-type(2) {
+  --image-caption-align: right;
   grid-area: griff;
 }
 
@@ -51,8 +52,8 @@
       "skills skills skills tools tools"
       "divider2 divider2 divider2 divider2 divider2"
       "reading reading reading reading reading"
-      "watching watching watching watching watching"
-      "listening listening listening listening listening";
+      "listening listening listening listening listening"
+      "watching watching watching watching watching";
 
   @media (width > 60rem) {
     grid-template-areas:
@@ -61,8 +62,8 @@
       ". divider1 divider1 divider1 divider1 divider1"
       "skills skills skills tools tools tools"
       ". divider2 divider2 divider2 divider2 divider2"
-      "reading reading reading listening listening listening"
-      "watching watching watching listening listening listening";
+      "reading reading reading watching watching watching"
+      "listening listening listening . . .";
   }
 }
 
