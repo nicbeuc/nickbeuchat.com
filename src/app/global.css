@@ -184,6 +184,7 @@ main > * {
   display: grid;
   grid-template-columns: subgrid;
   align-self: start;
+  align-items: start;
 }
 
 ul,ol {

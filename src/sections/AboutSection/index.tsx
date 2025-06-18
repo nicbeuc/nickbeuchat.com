@@ -1,11 +1,13 @@
 import Link from '@/components/Link'
+import Image from '@/components/Image'
 import styles from './styles.module.css'
 
 export default function AboutSection() {
   return (
     <div className={styles.wrapper}>
       <section className={styles.imagesWrapper}>
-
+        <Image src="/images/nick-placeholder.jpg" width={500} height={500} alt="Nick Beuchat" caption="Nick" />
+        <Image src="/images/griff-placeholder.jpg" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" />
       </section>
       <section className={styles.copyWrapper}>
         <div className={styles.sectionWrapper}>
@@ -77,8 +79,8 @@ export default function AboutSection() {
               <p className="color-dimmed">Red House Painters</p>
             </li>
             <li className="item-group">
-              <Link href="https://open.spotify.com/album/71R4tl3qYgZVvdlwE7Fxs6" external iconName="arrow-top-right">Tin Drum</Link>
-              <p className="color-dimmed">Japan</p>
+              <Link href="https://open.spotify.com/album/5vBpIxm8ws6pWyVmTWiGE1" external iconName="arrow-top-right">Vespertine</Link>
+              <p className="color-dimmed">Björk</p>
             </li>
           </ul>
         </div>

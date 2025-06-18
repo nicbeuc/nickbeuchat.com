@@ -2,6 +2,8 @@
   grid-template-areas:
     "copy copy copy copy copy"
     "images images images images images";
+  row-gap: 2rem;
+
   @media (width > 60rem) {
     grid-template-areas:
       "images images images images images images copy copy copy copy copy copy";
@@ -10,12 +12,37 @@
 
 .imagesWrapper {
   grid-area: images;
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: .5rem;
+  grid-template-areas:
+    "nick nick nick nick ."
+    ". . griff griff griff";
+
+  @media (width > 60rem) {
+    grid-template-areas:
+      "nick nick nick . . ."
+      ". . griff griff . .";
+  }
+
+  @media (width <= 60rem) {
+    border-top: var(--border-divider);
+    padding-top: 2rem;
+  }
+}
+
+.imagesWrapper figure:nth-of-type(1) {
+  grid-area: nick;
+}
+
+.imagesWrapper figure:nth-of-type(2) {
+  grid-area: griff;
 }
 
 .copyWrapper {
   grid-area: copy;
   display: grid;
-  row-gap: 2.5rem;
+  row-gap: 2rem;
   grid-template-columns: subgrid;
   grid-template-areas:
       "about about about about about"
