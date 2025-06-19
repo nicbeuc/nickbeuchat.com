@@ -93,7 +93,7 @@ h6 {
   /* Typography */
   --font-size-body: 0.875rem;
   --font-size-title: 1.5rem;
-  --font-letter-spacing-body: -.035ch;
+  --font-letter-spacing-body: 0;
   --font-letter-spacing-title: -.05ch;
   --font-weight-body: 300;
   --font-line-height-body: 1.5;
@@ -117,6 +117,7 @@ h6 {
 
   /* Mobile */
   @media (width <= 60rem) {
+    --font-size-title: 1.25rem;
     --page-margin-block: 1rem;
     --page-margin-inline: 1rem;
     --grid-columns: repeat(5, 1fr);

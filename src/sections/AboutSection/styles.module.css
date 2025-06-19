@@ -46,14 +46,14 @@
   row-gap: 2rem;
   grid-template-columns: subgrid;
   grid-template-areas:
-      "about about about about about"
-      "contact contact contact contact contact"
-      "divider1 divider1 divider1 divider1 divider1"
-      "skills skills skills tools tools"
-      "divider2 divider2 divider2 divider2 divider2"
-      "reading reading reading reading reading"
-      "listening listening listening listening listening"
-      "watching watching watching watching watching";
+    "about about about about about"
+    "contact contact contact contact contact"
+    "divider1 divider1 divider1 divider1 divider1"
+    "skills skills skills tools tools"
+    "divider2 divider2 divider2 divider2 divider2"
+    "reading reading reading reading reading"
+    "listening listening listening listening listening"
+    "watching watching watching watching watching";
 
   @media (width > 60rem) {
     grid-template-areas:
