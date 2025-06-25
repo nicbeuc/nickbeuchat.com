@@ -4,8 +4,8 @@ import styles from './styles.module.css'
 export default function IntroSection() {
   return (
     <section className={styles.wrapper}>
-      <p className="font-title">Hi, I’m Nick, a designer and creative developer with a passion for crafting simple, inclusive solutions for the web.</p>
-      <ul>
+      <p className="font-title" data-entrance-animation>Hi, I’m Nick, a designer and creative developer with a passion for crafting simple, inclusive solutions for the web.</p>
+      <ul data-entrance-animation-group>
         <li>
           <Link href="#" iconName="download" external>Resumé</Link>
         </li>
