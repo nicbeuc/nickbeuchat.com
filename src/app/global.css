@@ -119,7 +119,14 @@ h6 {
   --entrance-animation-name: animate-in;
   --entrance-animation-duration: 600ms;
   --entrance-animation-timing: var(--ease-out-quint);
-  --entrance-animation-delay-basis: 0s;
+  --entrance-animation-delay-initial: 100ms;
+  --entrance-animation-stagger-basis: 50ms;
+  --entrance-animation-stagger-1: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 1));
+  --entrance-animation-stagger-2: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 2));
+  --entrance-animation-stagger-3: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 3));
+  --entrance-animation-stagger-4: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 4));
+  --entrance-animation-stagger-5: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 5));
+  --entrance-animation-stagger-6: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 6));
 
   /* Mobile */
   @media (width <= 60rem) {
@@ -200,6 +207,12 @@ ul,ol {
   max-resolution: 0;
 }
 
+hr {
+  border: 0;
+  border-bottom: var(--border-divider);
+  margin-block: 0;
+}
+
 /* Typography */
 
 p {
@@ -276,22 +289,23 @@ h2, h3, h4, h5 {
 
 /* Entrance animations */
 
-[data-entrance-animation],
-[data-entrance-animation-group] > * {
-  --__entrance-animation-delay: var(--entrance-animation-delay, var(--entrance-animation-delay-basis));
+[data-entrance-animation] {
+  --__entrance-animation-stagger: var(--entrance-animation-stagger, var(--entrance-animation-delay-initial));
   animation-name: var(--entrance-animation-name);
   animation-timing-function: var(--entrance-animation-timing);
   animation-duration: var(--entrance-animation-duration);
-  animation-delay: var(--__entrance-animation-delay);
+  animation-delay: var(--__entrance-animation-stagger);
   animation-fill-mode: both;
 }
 
 @keyframes animate-in {
   0% {
+    filter: blur(4px);
     transform: translate3d(0, 8px, 0);
     opacity: 0;
   }
   100% {
+    filter: blur(0px);
     translate: translate3d(0, 0, 0);
     opacity: 1;
   }

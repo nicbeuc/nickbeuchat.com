@@ -1,10 +1,17 @@
 .wrapper {
   display: grid;
   grid-template-columns: subgrid;
-  row-gap: 2.5rem;
+  row-gap: 1.75rem;
 
   @media (width > 60rem) {
     grid-column: 6/-1;
+  }
+}
+
+.wrapper hr {
+  grid-column: 1/-1;
+  @media (width > 60rem) {
+    grid-column-start: 3;
   }
 }
 

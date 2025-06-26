@@ -29,3 +29,14 @@
   }
 }
 
+/* .wrapper ul li:first-of-type {
+  --entrance-animation-stagger: var(--entrance-animation-stagger-1);
+} */
+
+.wrapper ul li:nth-of-type(2) {
+  --entrance-animation-stagger: var(--entrance-animation-stagger-1);
+}
+
+.wrapper ul li:nth-of-type(3) {
+  --entrance-animation-stagger: var(--entrance-animation-stagger-2);
+}

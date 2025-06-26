@@ -6,10 +6,10 @@ export default function AboutSection() {
   return (
     <div className={styles.wrapper}>
       <section className={styles.imagesWrapper}>
-        <Image src="/images/nick-placeholder.webp" width={500} height={500} alt="Nick Beuchat" caption="Nick"/>
-        <Image src="/images/griff-placeholder.webp" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" />
+        <Image src="/images/nick-placeholder.webp" width={500} height={500} alt="Nick Beuchat" caption="Nick" data-entrance-animation />
+        <Image src="/images/griff-placeholder.webp" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" data-entrance-animation />
       </section>
-      <section className={styles.copyWrapper}>
+      <section className={styles.copyWrapper} data-entrance-animation>
         <div className={styles.sectionWrapper}>
           <h2>About Me</h2>
           <div>
