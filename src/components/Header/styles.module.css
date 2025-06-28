@@ -9,6 +9,9 @@
   grid-template-columns: var(--grid-columns);
   grid-template-areas:
   "logo logo logo logo logo logo logo title title title title nav nav";
+  animation-name: header-animate-in;
+  animation-duration: var(--entrance-animation-duration);
+  animation-timing-function: var(--entrance-animation-timing);
 
   @media (width <= 60rem) {
     grid-template-areas:
@@ -27,6 +30,18 @@
   width: fit-content;
 }
 
+.logoWrapper span {
+  display: block;
+  letter-spacing: -.03ch;
+  font-weight: 500;
+  transform: scale(0.99) translateY(-0.01em);
+  transform-origin: center left;
+}
+
+.logoWrapper:has([data-lottie-loaded="true"]) span {
+  display: none;
+}
+
 .titleWrapper {
   grid-area: title;
   color: var(--color-foreground-dimmed);
@@ -42,4 +57,18 @@
 
 .headerWrapper[data-scrolled] > *:not(.logoWrapper) {
   opacity: 0;
+}
+
+@keyframes header-animate-in {
+  0% {
+    filter: blur(4px);
+    transform: translate3d(0, -8px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0px);
+    translate: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }

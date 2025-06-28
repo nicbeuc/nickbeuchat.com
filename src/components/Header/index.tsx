@@ -24,6 +24,7 @@ export default function Header() {
     <header className={styles.headerWrapper} data-scrolled={scrolled ? 'true' : undefined}>
       <div className={styles.logoWrapper}>
         <Link href="/" title="Home">
+          <span>Nick Beuchat</span>
           <AnimatedLogo compact={scrolled} />
         </Link>
       </div>
