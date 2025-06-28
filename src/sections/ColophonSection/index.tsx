@@ -16,12 +16,12 @@ export default function ColophonSection() {
       <hr />
       <section>
         <h2>Typography</h2>
-        <p>This site is set in <Link external href="https://www.fontshare.com/fonts/switzer">Switzer</Link>, a neo-grotesk typeface created by the incredible <Link external href="https://www.indiantypefoundry.com/">Indian Type Foundry</Link>.</p>
+        <p>This site is set in <Link target="_blank" href="https://www.fontshare.com/fonts/switzer">Switzer</Link>, a neo-grotesk typeface created by the incredible <Link target="_blank" href="https://www.indiantypefoundry.com/">Indian Type Foundry</Link>.</p>
       </section>
       <hr />
       <section>
         <h2>Icons</h2>
-        <p>This website features <Link external href="https://basicons.xyz/">Basicons</Link>, a simple and sharp icon suite created by <Link external href="https://www.preciousm.co/">Precious Madubuike</Link> and <Link external href="https://www.linkedin.com/in/solomon-omojola-6255198a/">Solomon Omojola.</Link></p>
+        <p>This website features <Link target="_blank" href="https://basicons.xyz/">Basicons</Link>, a simple and sharp icon suite created by <Link target="_blank" href="https://www.preciousm.co/">Precious Madubuike</Link> and <Link target="_blank" href="https://www.linkedin.com/in/solomon-omojola-6255198a/">Solomon Omojola.</Link></p>
       </section>
       <hr />
       <section>
