@@ -1,35 +1,22 @@
 'use client'
 
-import NextLink from "next/link"
+import { AnchorHTMLAttributes } from "react"
+import NextLink, { type LinkProps as NextLinkProps } from "next/link"
 import Icon from "../Icon"
 import { IconProps } from "../Icon"
 
-type LinkProps = {
-  handleClick?: React.MouseEventHandler,
-  href: string,
+interface LinkProps extends NextLinkProps, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof NextLinkProps> {
   iconName?: IconProps["name"],
-  external?: boolean,
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
-export default function Link({ handleClick, href, iconName, external = false, children, ...delegated }: LinkProps) {
-  const linkInner = (<>
-    <span>{children}</span>
-    {iconName && (
-      <Icon name={iconName} />
-    )}
-  </>)
-
-  if (handleClick) {
-    return (
-      <button className="link" onClick={handleClick} {...delegated}>
-        {linkInner}
-      </button>
-    )
-  }
+export default function Link({ children, iconName, ...rest }: LinkProps) {
   return (
-    <NextLink href={href} target={external ? "_blank" : undefined} className="link" {...delegated}>
-      {linkInner}
+    <NextLink className="link" {...rest}>
+      <span>{children}</span>
+      {iconName && (
+        <Icon name={iconName} />
+      )}
     </NextLink>
   )
 }

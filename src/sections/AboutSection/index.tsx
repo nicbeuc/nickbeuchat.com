@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import Image from '@/components/Image'
+import VisuallyHidden from '@/components/VisuallyHidden'
 import { CONTACT_LINKS } from '@/utils/constant'
 import styles from './styles.module.css'
 
@@ -22,13 +23,19 @@ export default function AboutSection() {
           <h2>Contact</h2>
           <ul className={styles.linkList}>
             <li>
-              <Link href="#" iconName="download" external>Resumé</Link>
+              <Link href={CONTACT_LINKS.resume} download="Nick Beuchat's Resumé">
+                <span aria-hidden="true">Resumé</span>
+                <VisuallyHidden>Download Nick&apos;s Resumé (PDF, 67KB)</VisuallyHidden>
+              </Link>
             </li>
             <li>
-              <Link href="#" iconName="copy" external>Email</Link>
+              <Link href={CONTACT_LINKS.email}>
+                <span aria-hidden="true">Email</span>
+                <VisuallyHidden>Send Nick an email (opens in new window)</VisuallyHidden>
+              </Link>
             </li>
             <li>
-              <Link href={CONTACT_LINKS.linkedIn} iconName="arrow-top-right" external>LinkedIn</Link>
+              <Link href={CONTACT_LINKS.linkedIn} target="_blank">LinkedIn</Link>
             </li>
           </ul>
         </div>
@@ -57,14 +64,14 @@ export default function AboutSection() {
         <div className={styles.sectionWrapper}>
           <h2>Reading</h2>
           <div className="item-group">
-            <Link href="https://www.goodreads.com/book/show/2528.All_the_Names" external iconName="arrow-top-right">All The Names</Link>
+            <Link href="https://www.goodreads.com/book/show/2528.All_the_Names" target="_blank" iconName="arrow-top-right">All The Names</Link>
             <p className="color-dimmed">José Saramago</p>
           </div>
         </div>
         <div className={styles.sectionWrapper}>
           <h2>Watching</h2>
           <div className="item-group">
-            <Link href="https://letterboxd.com/film/yi-yi/" external iconName="arrow-top-right">Yi Yi</Link>
+            <Link href="https://letterboxd.com/film/yi-yi/" target="_blank" iconName="arrow-top-right">Yi Yi</Link>
             <p className="color-dimmed">dir. Edward Yang</p>
           </div>
         </div>
@@ -72,15 +79,15 @@ export default function AboutSection() {
           <h2>Listening</h2>
           <ul>
             <li className="item-group">
-              <Link href="https://open.spotify.com/album/6uLokj5GmuVeUWWJEzabT9" external iconName="arrow-top-right">Axxess &amp; Ace</Link>
+              <Link href="https://open.spotify.com/album/6uLokj5GmuVeUWWJEzabT9" target="_blank" iconName="arrow-top-right">Axxess &amp; Ace</Link>
               <p className="color-dimmed">Songs: Ohia</p>
             </li>
             <li className="item-group">
-              <Link href="https://open.spotify.com/album/4rL0RzmHMQyHiZqJVdt7A8" external iconName="arrow-top-right">Old Ramon</Link>
+              <Link href="https://open.spotify.com/album/4rL0RzmHMQyHiZqJVdt7A8" target="_blank" iconName="arrow-top-right">Old Ramon</Link>
               <p className="color-dimmed">Red House Painters</p>
             </li>
             <li className="item-group">
-              <Link href="https://open.spotify.com/album/5vBpIxm8ws6pWyVmTWiGE1" external iconName="arrow-top-right">Vespertine</Link>
+              <Link href="https://open.spotify.com/album/5vBpIxm8ws6pWyVmTWiGE1" target="_blank" iconName="arrow-top-right">Vespertine</Link>
               <p className="color-dimmed">Björk</p>
             </li>
           </ul>
