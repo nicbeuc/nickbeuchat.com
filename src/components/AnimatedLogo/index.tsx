@@ -30,13 +30,13 @@ export default function AnimatedLogo({compact = false} : AnimatedLogoProps) {
       autoplay={false}
       className={styles.logo}
       rendererSettings={{
-        title: "Nick Beuchat",
         progressiveLoad: true
       }}
       onEnterFrame={() => {
         setIsLoaded(true);
       }}
       data-lottie-loaded={isLoaded}
+      aria-hidden="true"
     />
   );
 }

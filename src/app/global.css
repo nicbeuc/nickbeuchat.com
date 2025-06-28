@@ -313,6 +313,7 @@ h2, h3, h4, h5 {
 /* Entrance animations */
 
 [data-entrance-animation] {
+  --__entrance-animation-start-pos: var(--entrance-animation-start-pos, 8px);
   --__entrance-animation-stagger: var(--entrance-animation-stagger, var(--entrance-animation-delay-initial));
   animation-name: var(--entrance-animation-name);
   animation-timing-function: var(--entrance-animation-timing);
@@ -321,10 +322,14 @@ h2, h3, h4, h5 {
   animation-fill-mode: both;
 }
 
+[data-entrance-animation="from-top"] {
+  --entrance-animation-start-pos: -8px;
+}
+
 @keyframes animate-in {
   0% {
     filter: blur(4px);
-    transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, var(--__entrance-animation-start-pos), 0);
     opacity: 0;
   }
   100% {

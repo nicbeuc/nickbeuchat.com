@@ -6,7 +6,7 @@ export default function Footer() {
   const yr = new Date().getFullYear();
 
   return (
-    <footer className={styles.wrapper}>
+    <footer className={styles.wrapper} data-entrance-animation>
       <p className={styles.copyright}>
         <Monogram /> <span>&copy; {yr}</span>
       </p>

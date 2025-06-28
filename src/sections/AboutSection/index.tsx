@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import Image from '@/components/Image'
+import { CONTACT_LINKS } from '@/utils/constant'
 import styles from './styles.module.css'
 
 export default function AboutSection() {
@@ -27,7 +28,7 @@ export default function AboutSection() {
               <Link href="#" iconName="copy" external>Email</Link>
             </li>
             <li>
-              <Link href="#" iconName="arrow-top-right" external>LinkedIn</Link>
+              <Link href={CONTACT_LINKS.linkedIn} iconName="arrow-top-right" external>LinkedIn</Link>
             </li>
           </ul>
         </div>

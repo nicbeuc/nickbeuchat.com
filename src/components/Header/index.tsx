@@ -6,8 +6,6 @@ import NavLink from '@/components/NavLink'
 import AnimatedLogo from '../AnimatedLogo'
 import styles from './styles.module.css'
 
-// to do: fallback for lottie animation OR configure entrance animations
-// to do: "scrolled" state when page refresh from below threshold
 
 export default function Header() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -21,7 +19,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={styles.headerWrapper} data-scrolled={scrolled ? 'true' : undefined}>
+    <header className={styles.headerWrapper} data-scrolled={scrolled ? 'true' : undefined} data-entrance-animation="from-top">
       <div className={styles.logoWrapper}>
         <Link href="/" title="Home">
           <span>Nick Beuchat</span>
