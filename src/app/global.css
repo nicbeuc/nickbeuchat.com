@@ -287,6 +287,29 @@ h2, h3, h4, h5 {
   }
 }
 
+.link {
+  --__link-color: var(--link-color, var(--color-foreground));
+  --__link-color-hover: var(--link-color-hover, var(--color-foregound));
+  --icon-color: var(--color-foreground-subtle);
+  color: var(--__link-color);
+  display: inline-flex;
+  align-items: center;
+  gap: .35em;
+  position: relative;
+  text-decoration: underline;
+  text-underline-offset: .3em;
+  text-decoration-color: var(--color-foreground-subtle);
+  transition: color var(--duration-short) ease, text-decoration-color var(--duration-short) ease;
+}
+
+@media (pointer:fine) {
+  .link:hover {
+    --icon-color: var(--__link-color-hover);
+    color: var(--__link-color-hover);
+    text-decoration-color: var(--__link-color-hover);
+  }
+}
+
 /* Entrance animations */
 
 [data-entrance-animation] {

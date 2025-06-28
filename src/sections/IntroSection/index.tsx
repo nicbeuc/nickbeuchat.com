@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import styles from './styles.module.css'
+import { CONTACT_LINKS } from '@/utils/constant'
 
 export default function IntroSection() {
   return (
@@ -13,7 +14,7 @@ export default function IntroSection() {
           <Link href="#" iconName="copy" external>Email</Link>
         </li>
         <li data-entrance-animation>
-          <Link href="#" iconName="arrow-top-right" external>LinkedIn</Link>
+          <Link href={CONTACT_LINKS.linkedIn} iconName="arrow-top-right" external>LinkedIn</Link>
         </li>
       </ul>
     </section>
