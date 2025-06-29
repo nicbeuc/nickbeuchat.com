@@ -5,10 +5,11 @@
   right: 0;
   z-index: 1;
   display: grid;
+  column-gap: var(--grid-column-gap);
   padding: var(--page-margin-block) var(--page-margin-inline);
   grid-template-columns: var(--grid-columns);
   grid-template-areas:
-  "logo logo logo logo logo logo logo title title title title nav nav";
+  "logo logo logo logo logo logo logo title title title nav nav";
 
   @media (width <= 60rem) {
     grid-template-areas:

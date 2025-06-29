@@ -1,0 +1,25 @@
+.wrapper {
+  --entrance-animation-initial-delay: 300ms;
+  padding-top: 2rem;
+  row-gap: 3rem;
+
+  @media (width > 60rem) {
+    row-gap: 4rem;
+  }
+}
+
+.wrapper > article {
+  grid-column: 1/-1;
+}
+
+
+@media (width > 60rem) {
+  .wrapper > article:first-of-type {
+    grid-column: 1/8;
+  }
+
+  .wrapper>article:nth-of-type(2) {
+    --entrance-animation-stagger: var(--entrance-animation-stagger-1);
+    grid-column: 8/13;
+  }
+}

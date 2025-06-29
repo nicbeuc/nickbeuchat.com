@@ -1,0 +1,51 @@
+.thumb {
+  @media (width > 75rem) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-areas:
+      "media media"
+      "details roles";
+  }
+}
+
+.mediaWrapper {
+  grid-area: media;
+  background-color: var(--color-grey-300);
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+
+  @media (width <= 75rem) {
+    margin-bottom: 1rem;
+  }
+}
+
+.details {
+  grid-area: details;
+  max-width: 48ch;
+
+  @media (width <= 75rem) {
+    margin-bottom: .5rem;
+  }
+}
+
+.details h3 {
+  color: var(--color-foreground);
+  font-weight: 500;
+  margin-inline-end: .35em;
+}
+
+.details > * {
+  display: inline;
+}
+
+.details p {
+  color: var(--color-foreground-dimmed);
+}
+
+.roles {
+  grid-area: roles;
+  color: var(--color-foreground-dimmed);
+}

@@ -111,6 +111,7 @@ h6 {
 
   /* Grid */
   --grid-columns: repeat(12, 1fr);
+  --grid-column-gap: 1.5rem;
 
   /* Borders */
   --border-divider: 1px solid var(--color-border);
@@ -121,12 +122,12 @@ h6 {
   --entrance-animation-timing: var(--ease-out-quint);
   --entrance-animation-delay-initial: 100ms;
   --entrance-animation-stagger-basis: 50ms;
-  --entrance-animation-stagger-1: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 1));
-  --entrance-animation-stagger-2: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 2));
-  --entrance-animation-stagger-3: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 3));
-  --entrance-animation-stagger-4: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 4));
-  --entrance-animation-stagger-5: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 5));
-  --entrance-animation-stagger-6: calc(var(--entrance-animation-delay-initial) + (var(--entrance-animation-stagger-basis) * 6));
+  --entrance-animation-stagger-1: calc(var(--entrance-animation-stagger-basis) * 1);
+  --entrance-animation-stagger-2: calc(var(--entrance-animation-stagger-basis) * 2);
+  --entrance-animation-stagger-3: calc(var(--entrance-animation-stagger-basis) * 3);
+  --entrance-animation-stagger-4: calc(var(--entrance-animation-stagger-basis) * 4);
+  --entrance-animation-stagger-5: calc(var(--entrance-animation-stagger-basis) * 5);
+  --entrance-animation-stagger-6: calc(var(--entrance-animation-stagger-basis) * 6);
 
   /* Mobile */
   @media (width <= 60rem) {
@@ -134,6 +135,7 @@ h6 {
     --page-margin-block: 1rem;
     --page-margin-inline: 1rem;
     --grid-columns: repeat(5, 1fr);
+    --grid-column-gap: 1rem;
   }
 
   /* Dark Mode */
@@ -166,6 +168,7 @@ body {
   display: grid;
   align-items: start;
   grid-template-columns: var(--grid-columns);
+  column-gap: var(--grid-column-gap);
   min-height: 100vh;
   padding: var(--page-margin-block) var(--page-margin-inline);
 
@@ -314,11 +317,12 @@ h2, h3, h4, h5 {
 
 [data-entrance-animation] {
   --__entrance-animation-start-pos: var(--entrance-animation-start-pos, 8px);
-  --__entrance-animation-stagger: var(--entrance-animation-stagger, var(--entrance-animation-delay-initial));
+  --__entrance-animation-stagger: var(--entrance-animation-stagger, 0s);
+  --__entrance-animation-initial-delay: var(--entrance-animation-initial-delay, 100ms);
   animation-name: var(--entrance-animation-name);
   animation-timing-function: var(--entrance-animation-timing);
   animation-duration: var(--entrance-animation-duration);
-  animation-delay: var(--__entrance-animation-stagger);
+  animation-delay: calc(var(--__entrance-animation-initial-delay) + var(--__entrance-animation-stagger));
   animation-fill-mode: both;
 }
 
