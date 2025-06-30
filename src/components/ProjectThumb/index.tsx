@@ -1,13 +1,17 @@
+import Link from 'next/link';
 import styles from './styles.module.css'
 
 type ProjectThumbProps = {
+  roles: Array<string>,
   media?: string | Array<string>,
   title: string,
   description: string,
-  roles: Array<string>
+  link?: string,
 }
 
-export default function ProjectThumb({ media, title, description, roles }: ProjectThumbProps) {
+// to do: create video component, images slides component
+
+export default function ProjectThumb({ media, title, description, roles, link }: ProjectThumbProps) {
   let mediaComponent = null;
 
   if (typeof media === "string") {
@@ -22,8 +26,12 @@ export default function ProjectThumb({ media, title, description, roles }: Proje
         {mediaComponent}
       </div>
       <div className={styles.details}>
-        <h3>{ title }</h3>
-        <p>{ description }</p>
+        <h3>
+          {link ? (
+            <Link href={link}>{title}</Link>
+          ) : title}
+        </h3>
+        <p>{description}</p>
       </div>
       {roles.length > 0 && (
         <p className={styles.roles}>

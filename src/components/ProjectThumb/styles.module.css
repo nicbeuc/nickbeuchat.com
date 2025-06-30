@@ -37,6 +37,12 @@
   margin-inline-end: .35em;
 }
 
+.details a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
 .details > * {
   display: inline;
 }
