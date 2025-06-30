@@ -1,16 +1,25 @@
 import styles from './styles.module.css'
 
 type ProjectThumbProps = {
+  media?: string | Array<string>,
   title: string,
   description: string,
   roles: Array<string>
 }
 
-export default function ProjectThumb({ title, description, roles }: ProjectThumbProps) {
+export default function ProjectThumb({ media, title, description, roles }: ProjectThumbProps) {
+  let mediaComponent = null;
+
+  if (typeof media === "string") {
+    mediaComponent = <video src={media} autoPlay muted loop />
+  } else {
+    mediaComponent = <div></div>
+  }
+
   return (
     <article className={styles.thumb} data-entrance-animation>
       <div className={styles.mediaWrapper}>
-
+        {mediaComponent}
       </div>
       <div className={styles.details}>
         <h3>{ title }</h3>

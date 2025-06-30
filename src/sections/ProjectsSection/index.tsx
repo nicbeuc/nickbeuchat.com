@@ -8,6 +8,7 @@ export default function ProjectsSection() {
       <ProjectThumb
         title="r.chiara"
         description="Despite the organization's rich history and strong community ties, The McNabb Center felt hindered by their."
+        // media="https://yxcr65xsmnbnpdvj.public.blob.vercel-storage.com/rchiara-thumb.webm"
         roles={["Design", "Development"]}
       />
       <ProjectThumb
