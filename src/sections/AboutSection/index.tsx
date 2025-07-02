@@ -1,15 +1,15 @@
 import Link from '@/components/Link'
 import Image from '@/components/Image'
 import VisuallyHidden from '@/components/VisuallyHidden'
-import { CONTACT_LINKS } from '@/utils/constant'
+import { CONTACT_LINKS } from '@/utils/constants'
 import styles from './styles.module.css'
 
 export default function AboutSection() {
   return (
     <div className={styles.wrapper}>
       <section className={styles.imagesWrapper}>
-        <Image src="/images/nick-placeholder.webp" width={500} height={500} alt="Nick Beuchat" caption="Nick" data-entrance-animation />
-        <Image src="/images/griff-placeholder.webp" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" data-entrance-animation />
+        <Image src="/images/nick-placeholder.webp" width={500} height={500} alt="Nick Beuchat" caption="Nick" entranceAnimation={true} />
+        <Image src="/images/griff-placeholder.webp" width={500} height={500} alt="Nick's dog, Griffin" caption="Griffin" entranceAnimation={true} />
       </section>
       <section className={styles.copyWrapper} data-entrance-animation>
         <div className={styles.sectionWrapper}>

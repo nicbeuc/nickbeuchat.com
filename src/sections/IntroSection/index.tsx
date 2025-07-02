@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import styles from './styles.module.css'
-import { CONTACT_LINKS } from '@/utils/constant'
+import { CONTACT_LINKS } from '@/utils/constants'
 import VisuallyHidden from '@/components/VisuallyHidden'
 
 export default function IntroSection() {

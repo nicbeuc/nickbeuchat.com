@@ -1,29 +1,23 @@
 import Link from 'next/link';
+import Video from '@components/Video';
+import { PROJECT_TYPE } from '@/utils/constants';
 import styles from './styles.module.css'
-
-type ProjectThumbProps = {
-  roles: Array<string>,
-  media?: string | Array<string>,
-  title: string,
-  description: string,
-  link?: string,
-}
 
 // to do: create video component, images slides component
 
-export default function ProjectThumb({ media, title, description, roles, link }: ProjectThumbProps) {
-  let mediaComponent = null;
-
-  if (typeof media === "string") {
-    mediaComponent = <video src={media} autoPlay muted loop />
-  } else {
-    mediaComponent = <div></div>
-  }
+export default function ProjectThumb(props: PROJECT_TYPE) {
+  const {
+    title,
+    description,
+    link,
+    roles,
+    thumbnailMedia
+  } = props
 
   return (
     <article className={styles.thumb} data-entrance-animation>
       <div className={styles.mediaWrapper}>
-        {mediaComponent}
+        {/* <Video sources={thumbnailMedia.videos} /> */}
       </div>
       <div className={styles.details}>
         <h3>
