@@ -12,14 +12,17 @@
 
 .mediaWrapper {
   grid-area: media;
-  background-color: var(--color-grey-300);
-  aspect-ratio: 16/9;
+  background-color: var(--color-background-dimmed);
   width: 100%;
   height: auto;
 
   @media (width <= 75rem) {
     margin-bottom: 1rem;
   }
+}
+
+.mediaWrapper:empty {
+  aspect-ratio: 3/2;
 }
 
 .details {

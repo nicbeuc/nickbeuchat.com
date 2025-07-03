@@ -88,6 +88,7 @@ h6 {
   --color-foreground: var(--color-grey-1000);
   --color-foreground-dimmed: var(--color-grey-800);
   --color-foreground-subtle: var(--color-grey-500);
+  --color-background-dimmed: var(--color-grey-300);
   --color-border: var(--color-grey-300);
 
   /* Typography */
@@ -144,6 +145,7 @@ h6 {
     --color-foreground: var(--color-white);
     --color-foreground-dimmed: var(--color-grey-500);
     --color-foreground-subtle: var(--color-grey-800);
+    --color-background-dimmed: var(--color-grey-900);
     --color-border: var(--color-grey-900);
   }
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Video from '@components/Video';
+import Video from '@/components/Video';
 import { PROJECT_TYPE } from '@/utils/constants';
 import styles from './styles.module.css'
 
@@ -12,12 +12,20 @@ export default function ProjectThumb(props: PROJECT_TYPE) {
     link,
     roles,
     thumbnailMedia
-  } = props
+  } = props;
+
+  const renderMediaComponent = () => {
+    if (thumbnailMedia.videos) {
+      return <Video sources={thumbnailMedia.videos} />
+    } else if (thumbnailMedia.images) {
+      return <p>Images go here</p>
+    }
+  }
 
   return (
     <article className={styles.thumb} data-entrance-animation>
       <div className={styles.mediaWrapper}>
-        {/* <Video sources={thumbnailMedia.videos} /> */}
+        {/* {renderMediaComponent()} */}
       </div>
       <div className={styles.details}>
         <h3>

@@ -10,8 +10,6 @@ export default function Video({ sources, autoplay = true, loop = true }: VideoPr
   return (
     <div className={styles.wrapper}>
       <video
-        width={750}
-        height={500}
         preload="none"
         controls={false}
         autoPlay={autoplay}
