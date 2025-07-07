@@ -112,7 +112,7 @@ h6 {
 
   /* Grid */
   --grid-columns: repeat(12, 1fr);
-  --grid-column-gap: 1.5rem;
+  --grid-column-gap: clamp(0.75rem, calc(0.5rem + 1vw), 1.5rem);
 
   /* Borders */
   --border-divider: 1px solid var(--color-border);
@@ -136,7 +136,7 @@ h6 {
     --page-margin-block: 1rem;
     --page-margin-inline: 1rem;
     --grid-columns: repeat(5, 1fr);
-    --grid-column-gap: 1rem;
+    --grid-column-gap: 0.75rem;
   }
 
   /* Dark Mode */

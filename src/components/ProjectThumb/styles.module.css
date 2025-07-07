@@ -11,8 +11,10 @@
 }
 
 .mediaWrapper {
+  --__thumb-media-aspect-ratio: var(--thumb-media-aspect-ratio, 3/2);
   grid-area: media;
   background-color: var(--color-background-dimmed);
+  aspect-ratio: var(--__thumb-media-aspect-ratio);
   width: 100%;
   height: auto;
 
@@ -21,13 +23,14 @@
   }
 }
 
-.mediaWrapper:empty {
+/* .mediaWrapper:empty {
   aspect-ratio: 3/2;
-}
+} */
 
 .details {
   grid-area: details;
   max-width: 48ch;
+  text-wrap: balance;
 
   @media (width <= 75rem) {
     margin-bottom: .5rem;
