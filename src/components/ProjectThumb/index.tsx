@@ -15,9 +15,9 @@ export default function ProjectThumb(props: PROJECT_TYPE) {
   } = props;
 
   const renderMediaComponent = () => {
-    if (thumbnailMedia.videos) {
+    if (thumbnailMedia?.videos) {
       return <Video sources={thumbnailMedia.videos} />
-    } else if (thumbnailMedia.images) {
+    } else if (thumbnailMedia?.images) {
       return <p>Images go here</p>
     }
   }

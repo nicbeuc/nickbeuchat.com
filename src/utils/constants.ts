@@ -26,6 +26,14 @@ export const PROJECTS: Array<PROJECT_TYPE> = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     link: '/projects/mcnabb-center',
     roles: ['Design', 'Development'],
+    thumbnailMedia: {
+      videos: [
+        {
+          src: `${BLOB_URL}/mcnabb-thumb.webm`,
+          type: 'video/webm'
+        }
+      ]
+    }
   },
   {
     title: 'Shake Shack',
