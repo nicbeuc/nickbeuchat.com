@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Video from '@/components/Video';
+import ImageCarousel from '@/components/ImageCarousel';
 import { PROJECT_TYPE } from '@/utils/constants';
 import styles from './styles.module.css'
 
@@ -18,14 +19,14 @@ export default function ProjectThumb(props: PROJECT_TYPE) {
     if (thumbnailMedia?.videos) {
       return <Video sources={thumbnailMedia.videos} />
     } else if (thumbnailMedia?.images) {
-      return <p>Images go here</p>
+      return <ImageCarousel images={thumbnailMedia.images} />
     }
   }
 
   return (
     <article className={styles.thumb} data-entrance-animation>
       <div className={styles.mediaWrapper}>
-        {/* {renderMediaComponent()} */}
+        {renderMediaComponent()}
       </div>
       <div className={styles.details}>
         <h3>

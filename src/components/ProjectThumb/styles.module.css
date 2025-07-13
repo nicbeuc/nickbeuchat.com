@@ -30,7 +30,7 @@
 .details {
   grid-area: details;
   max-width: 48ch;
-  text-wrap: balance;
+  /* text-wrap: balance; */
 
   @media (width <= 75rem) {
     margin-bottom: .5rem;

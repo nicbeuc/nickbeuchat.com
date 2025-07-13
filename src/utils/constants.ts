@@ -12,33 +12,45 @@ export const PROJECTS: Array<PROJECT_TYPE> = [
     description: "Reimagining a jeweler's online presence",
     link: '/projects/rchiara',
     roles: ['Design', 'Development'],
-    thumbnailMedia: {
-      videos: [
-        {
-          src: `${BLOB_URL}/rchiara-thumb.webm`,
-          type: 'video/webm'
-        }
-      ]
-    }
+    // thumbnailMedia: {
+    //   videos: [
+    //     {
+    //       src: `${BLOB_URL}/rchiara-thumb.webm`,
+    //       type: 'video/webm'
+    //     }
+    //   ]
+    // }
   },
   {
     title: 'The McNabb Center',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description: "A digital revamp for a local nonprofit mainstay",
     link: '/projects/mcnabb-center',
     roles: ['Design', 'Development'],
-    thumbnailMedia: {
-      videos: [
-        {
-          src: `${BLOB_URL}/mcnabb-thumb.webm`,
-          type: 'video/webm'
-        }
-      ]
-    }
+    // thumbnailMedia: {
+    //   videos: [
+    //     {
+    //       src: `${BLOB_URL}/mcnabb-thumb.webm`,
+    //       type: 'video/webm'
+    //     }
+    //   ]
+    // }
   },
   {
     title: 'Shake Shack',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description: "Merchandise storefront for a global culinary phenomenon",
     roles: ['Design', 'Development'],
+    thumbnailMedia: {
+      images: [
+        {
+          src: '/images/thumb-ss-test.webp',
+          alt: 'alt'
+        },
+        {
+          src: '/images/media-placeholder.svg',
+          alt: 'alt'
+        }
+      ]
+    }
   },
   {
     title: 'The Sims',
@@ -89,6 +101,9 @@ export type PROJECT_TYPE = {
       src: string,
       type: string
     }>,
-    images?: Array<string>
+    images?: Array<{
+      src: string,
+      alt: string
+    }>
   }
 }
