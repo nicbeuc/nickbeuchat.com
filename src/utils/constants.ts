@@ -42,11 +42,15 @@ export const PROJECTS: Array<PROJECT_TYPE> = [
     thumbnailMedia: {
       images: [
         {
-          src: '/images/thumb-ss-test.webp',
+          src: '/images/thumbnails/shakeshack/shakeshack-thumb-1.webp',
           alt: 'alt'
         },
         {
-          src: '/images/media-placeholder.svg',
+          src: '/images/thumbnails/shakeshack/shakeshack-thumb-2.webp',
+          alt: 'alt'
+        },
+        {
+          src: '/images/thumbnails/shakeshack/shakeshack-thumb-3.webp',
           alt: 'alt'
         }
       ]
