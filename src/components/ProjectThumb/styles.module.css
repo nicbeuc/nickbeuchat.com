@@ -29,7 +29,7 @@
 
 .details {
   grid-area: details;
-  max-width: 48ch;
+  /* max-width: 48ch; */
   /* text-wrap: balance; */
 
   @media (width <= 75rem) {

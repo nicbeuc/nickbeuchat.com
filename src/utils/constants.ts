@@ -67,29 +67,14 @@ export const PROJECTS: Array<PROJECT_TYPE> = [
     roles: ['Design', 'Development'],
   },
   {
-    title: 'BoomCo',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    roles: ['Design'],
-  },
-  {
     title: 'SOFI TUKKER',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     roles: ['Design', 'Development'],
   },
   {
-    title: 'Chroma Energy Group',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    roles: ['Design'],
-  },
-  {
     title: 'Ambition',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     roles: ['Design'],
-  },
-  {
-    title: 'Orange Hat Brewing Co.',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    roles: ['Graphic Design'],
   },
 ]
 
