@@ -86,18 +86,20 @@ h6 {
   --color-white: white;
   --color-background: var(--color-white);
   --color-foreground: var(--color-grey-1000);
-  --color-foreground-dimmed: var(--color-grey-800);
+  --color-foreground-dimmed: var(--color-grey-700);
   --color-foreground-subtle: var(--color-grey-500);
   --color-background-dimmed: var(--color-grey-300);
   --color-border: var(--color-grey-300);
 
   /* Typography */
+  --font-size-body-sm: 0.75rem;
   --font-size-body: 0.875rem;
+  --font-size-body-lg: 1rem;
   --font-size-title: 1.5rem;
-  --font-letter-spacing-body: 0;
+  --font-letter-spacing-body: -0.025ch;
   --font-letter-spacing-title: -.05ch;
   --font-weight-body: 300;
-  --font-line-height-body: 1.5;
+  --font-line-height-body: 1.35;
   --font-line-height-title: 1.25;
 
   /* Animations & Transitions */
@@ -112,7 +114,7 @@ h6 {
 
   /* Grid */
   --grid-columns: repeat(12, 1fr);
-  --grid-column-gap: clamp(0.75rem, calc(0.5rem + 1vw), 1.5rem);
+  --grid-column-gap: clamp(1rem, calc(0.5rem + 2vw), 2.25rem);
 
   /* Borders */
   --border-divider: 1px solid var(--color-border);
@@ -221,7 +223,7 @@ hr {
 /* Typography */
 
 p {
-  text-wrap: balance;
+  /* text-wrap: balance; */
   max-width: 64ch;
 }
 

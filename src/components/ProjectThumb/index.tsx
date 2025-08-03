@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Video from '@/components/Video';
-import ImageCarousel from '@/components/ImageCarousel';
+import Image from 'next/image';
 import { PROJECT_TYPE } from '@/utils/constants';
 import styles from './styles.module.css'
 
@@ -18,8 +18,8 @@ export default function ProjectThumb(props: PROJECT_TYPE) {
   const renderMediaComponent = () => {
     if (thumbnailMedia?.videos) {
       return <Video sources={thumbnailMedia.videos} />
-    } else if (thumbnailMedia?.images) {
-      return <ImageCarousel images={thumbnailMedia.images} />
+    } else if (thumbnailMedia?.image) {
+      return <Image src={thumbnailMedia.image.src} alt={thumbnailMedia.image.alt} width={600} height={400} />
     }
   }
 

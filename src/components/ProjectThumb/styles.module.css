@@ -1,6 +1,7 @@
 .thumb {
   @media (width > 75rem) {
     display: grid;
+    align-items: baseline;
     grid-template-columns: 1fr auto;
     row-gap: 1rem;
     column-gap: 1rem;
@@ -17,10 +18,19 @@
   aspect-ratio: var(--__thumb-media-aspect-ratio);
   width: 100%;
   height: auto;
+  position: relative;
 
   @media (width <= 75rem) {
     margin-bottom: 1rem;
   }
+}
+
+.mediaWrapper > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* .mediaWrapper:empty {
@@ -31,6 +41,7 @@
   grid-area: details;
   /* max-width: 48ch; */
   /* text-wrap: balance; */
+  font-size: var(--font-size-body-lg);
 
   @media (width <= 75rem) {
     margin-bottom: .5rem;
@@ -39,8 +50,9 @@
 
 .details h3 {
   color: var(--color-foreground);
-  font-weight: 500;
+  font-weight: 400;
   margin-inline-end: .35em;
+  font-size: inherit
 }
 
 .details a::after {
@@ -49,8 +61,10 @@
   inset: 0;
 }
 
-.details > * {
-  display: inline;
+@media (width > 75rem) {
+  .details > * {
+    display: inline;
+  }
 }
 
 .details p {
@@ -60,4 +74,5 @@
 .roles {
   grid-area: roles;
   color: var(--color-foreground-dimmed);
+  font-size: var(--font-size-body-sm);
 }

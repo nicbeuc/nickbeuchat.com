@@ -40,26 +40,22 @@ export const PROJECTS: Array<PROJECT_TYPE> = [
     description: "Merchandise storefront for a global culinary phenomenon",
     roles: ['Design', 'Development'],
     thumbnailMedia: {
-      images: [
-        {
-          src: '/images/thumbnails/shakeshack/shakeshack-thumb-1.webp',
-          alt: 'alt'
-        },
-        {
-          src: '/images/thumbnails/shakeshack/shakeshack-thumb-2.webp',
-          alt: 'alt'
-        },
-        {
-          src: '/images/thumbnails/shakeshack/shakeshack-thumb-3.webp',
-          alt: 'alt'
-        }
-      ]
+      image: {
+        src: '/images/thumbnails/shakeshack/shakeshack-thumb-1.webp',
+        alt: 'alt'
+      }
     }
   },
   {
     title: 'The Sims',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     roles: ['Design', 'Development'],
+    thumbnailMedia: {
+      image: {
+        src: "/images/thumbnails/thesims-thumb.webp",
+        alt: ''
+      }
+    }
   },
   {
     title: 'Dr. Noze Best',
@@ -90,9 +86,9 @@ export type PROJECT_TYPE = {
       src: string,
       type: string
     }>,
-    images?: Array<{
+    image: {
       src: string,
       alt: string
-    }>
+    }
   }
 }
