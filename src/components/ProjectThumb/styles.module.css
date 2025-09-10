@@ -40,7 +40,7 @@
 .details {
   grid-area: details;
   /* max-width: 48ch; */
-  /* text-wrap: balance; */
+  text-wrap: balance;
   /* font-size: var(--font-size-body-lg); */
 
   @media (width <= 75rem) {
@@ -73,6 +73,6 @@
 
 .roles {
   grid-area: roles;
-  color: var(--color-foreground-subtle);
+  color: var(--color-foreground-dimmed);
   /* font-size: var(--font-size-body-sm); */
 }
