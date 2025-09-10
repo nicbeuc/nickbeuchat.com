@@ -2,10 +2,10 @@
   --entrance-animation-initial-delay: 300ms;
   --entrance-animation-stagger: var(--entrance-animation-stagger-4);
   padding-top: 2rem;
-  row-gap: 3rem;
+  row-gap: 2rem;
 
   @media (width > 60rem) {
-    row-gap: 4rem;
+    row-gap: 3rem;
   }
 }
 
@@ -13,6 +13,9 @@
   grid-column: 1/-1;
 }
 
+.wrapper > hgroup {
+  --entrance-animation-stagger: 0s;
+}
 
 @media (width > 60rem) {
   .wrapper > article:first-of-type {

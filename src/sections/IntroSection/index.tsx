@@ -6,7 +6,7 @@ import VisuallyHidden from '@/components/VisuallyHidden'
 export default function IntroSection() {
   return (
     <section className={styles.wrapper}>
-      <p className="font-title" data-entrance-animation>Hi, I’m Nick, a designer and creative developer with a passion for crafting simple, inclusive solutions for the web.</p>
+    <p className="font-title" data-entrance-animation>Hi, I’m Nick, a designer and creative developer with a passion for crafting simple, inclusive solutions for the web. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus tellus mollis justo accumsan ornare.</p>
       <ul>
         <li data-entrance-animation>
           <Link href={CONTACT_LINKS.resume} download="Nick Beuchat's Resumé">
